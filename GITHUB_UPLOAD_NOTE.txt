@@ -1,0 +1,12 @@
+UPLOAD THIS FOLDER WITH GITHUB DESKTOP
+
+AJADS_GITHUB_READY/
+├── index.html
+├── config.js
+├── .nojekyll
+└── assets/
+    ├── images/
+    ├── posters/
+    └── videos/
+
+Do not put index.html inside another nested folder when creating the repository.

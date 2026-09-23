@@ -1,0 +1,30 @@
+AJADS PROJECT INQUIRY EMAIL DELIVERY
+====================================
+Destination: infoajads.pk@gmail.com
+Provider: Web3Forms
+
+The AJADS project inquiry form now uses the Web3Forms API. The supplied Web3Forms access key is embedded as the form access_key, and submissions are sent from the browser directly to Web3Forms. Web3Forms documents this setup for static HTML/JavaScript sites with no backend required.
+
+WHAT THE FORM SENDS
+-------------------
+- Name
+- Email (used as Reply-To)
+- Phone / WhatsApp
+- Brand / Company
+- Project type
+- Approx. budget
+- Project details
+- Timeline
+- Website / Instagram / reference
+
+TEST
+----
+1. Deploy the extracted AJADS_FINAL folder to GitHub Pages or another HTTPS/static host.
+2. Click Start a Project.
+3. Submit a real test inquiry.
+4. Check infoajads.pk@gmail.com, including Spam/Promotions.
+5. A successful response is shown only when Web3Forms returns success. If the API request fails, the website shows a mailto fallback containing the completed inquiry.
+
+SECURITY NOTE
+-------------
+The Web3Forms access key is designed to be used client-side for static sites. Do not place Gmail passwords or Google OAuth secrets in this website.

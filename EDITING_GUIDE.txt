@@ -1,0 +1,44 @@
+AJADS — EASY EDIT + PREMIUM MOTION
+
+MAIN FILE TO EDIT
+Open config.js.
+
+You can change:
+- brand name
+- email
+- hero text
+- accent color
+- background color
+- services
+- process
+- selected projects
+
+PROJECT MEDIA
+The selected portfolio is curated into 5 case-study groups:
+1. Quiet Form — Fashion (project-14 + project-16)
+2. Every Second — Rolex / luxury (project-13)
+3. Made to Crave — Food (project-07 + project-08)
+4. Train Together — Gym (project-04)
+5. The Confidence Effect — Hair / beauty (project-03)
+
+MOTION SYSTEM
+The website itself contains motion graphics and cinematic UI treatment:
+- cinematic loading sequence
+- animated typography entrance
+- scroll reveal choreography
+- statement text line animation
+- animated marquee
+- video autoplay while in view
+- hover video zoom and 3D tilt
+- magnetic buttons
+- custom cursor on desktop
+- parallax hero image
+- scroll progress indicator
+- cinematic project modal transitions
+- sequential playback for grouped projects
+- animated CTA shine / orbital detail
+- reduced-motion accessibility fallback
+
+IMPORTANT
+Do not delete assets/videos or assets/posters unless you also change config.js.
+Open index.html locally to preview, or deploy the folder to GitHub Pages.
