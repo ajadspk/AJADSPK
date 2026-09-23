@@ -34,8 +34,8 @@ window.AJADS_CONFIG = {
       files: ["project-14.mp4", "project-16.mp4"],
       poster: "assets/posters/project-16.jpg",
       title: "Quiet Form",
-      category: "FASHION / COMMERCIAL",
-      description: "A refined fashion campaign combining the Louis Vuitton sequence with the blue-shirt studio film."
+      category: "FASHION / FILM",
+      description: "A refined fashion film combining the Louis Vuitton sequence with the blue-shirt studio campaign."
     },
     {
       id: 2,
@@ -43,22 +43,31 @@ window.AJADS_CONFIG = {
       poster: "assets/posters/project-13.jpg",
       title: "Every Second",
       category: "LUXURY / PRODUCT FILM",
-      description: "A cinematic Rolex watch film built around precision, detail and the feeling of luxury."
+      description: "A cinematic watch film built around precision, atmosphere and the feeling of luxury."
     },
     {
       id: 3,
       files: ["project-07.mp4", "project-08.mp4"],
       poster: "assets/posters/project-08.jpg",
       title: "Made to Crave",
-      category: "FOOD / COMMERCIAL",
-      description: "A sensory food campaign combining the biscuit advertisement with the chocolate product film."
+      category: "FOOD / PRODUCT FILM",
+      description: "Sensory food storytelling pairing the biscuit campaign with the chocolate product film."
     },
     {
       id: 4,
-      files: ["project-04.mp4", "project-03.mp4"],
+      files: ["project-04.mp4"],
       poster: "assets/posters/project-04.jpg",
-      title: "Everyday Confidence",
-      category: "BRANDING / PERSONAL CARE",
-      description: "A combined fitness and hair-tonic campaign bringing together movement, lifestyle and personal-care storytelling."
+      title: "Train Together",
+      category: "FITNESS / CAMPAIGN",
+      description: "High-energy fitness storytelling designed around movement, community and performance."
+    },
+    {
+      id: 5,
+      files: ["project-03.mp4"],
+      poster: "assets/posters/project-03.jpg",
+      title: "The Confidence Effect",
+      category: "BEAUTY / PERSONAL CARE",
+      description: "A product-led beauty film using close detail, human presence and cinematic pacing."
     }
+  ]
 };

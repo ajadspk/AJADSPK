@@ -1,24 +1,10 @@
-AJADS FINAL GITHUB PAGES CHECKLIST
+AJADS FINAL LAUNCH CHECKLIST
 
-[ ] Extract AJADS_GITHUB_READY.zip
-[ ] Do NOT upload the ZIP itself
-[ ] Open the extracted folder
-[ ] Confirm index.html is directly inside the folder
-[ ] Confirm assets/images exists
-[ ] Confirm assets/posters exists
-[ ] Confirm assets/videos exists
-[ ] Install/open GitHub Desktop
-[ ] Add Local Repository
-[ ] Publish repository to GitHub
-[ ] Keep repository Public
-[ ] GitHub > Settings > Pages
-[ ] Source = Deploy from a branch
-[ ] Branch = main
-[ ] Folder = / (root)
-[ ] Save
-[ ] Wait for deployment
-[ ] Open the generated GitHub Pages URL
+[ ] Extract ZIP
+[ ] Open index.html / use VS Code Live Server
+[ ] Test desktop
+[ ] Test mobile at 390px and 768px
 [ ] Test every project video
-[ ] Test mobile layout
 [ ] Test Start a Project form
-[ ] Check infoajads.pk@gmail.com for a test inquiry
+[ ] Upload repository ROOT contents to GitHub
+[ ] GitHub Pages: main branch / root folder
