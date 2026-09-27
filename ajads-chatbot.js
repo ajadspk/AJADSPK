@@ -35,7 +35,7 @@
   .ajads-ai-icon:before{content:"•••";position:absolute;left:4px;top:-7px;font-size:13px;letter-spacing:1px;color:#111}
   @keyframes ajPulse{0%,100%{opacity:.2;transform:scale(.98)}50%{opacity:.75;transform:scale(1.06)}}
 
-  .ajads-ai-panel{position:fixed;right:24px;bottom:24px;width:min(560px,calc(100vw - 28px));height:min(860px,calc(100vh - 48px));min-height:620px;background:#efeae2;color:#111;border:1px solid rgba(255,255,255,.25);border-radius:22px;overflow:hidden;z-index:2147483001;isolation:isolate;box-shadow:0 30px 100px rgba(0,0,0,.48);display:none;flex-direction:column;contain:layout paint;}
+  .ajads-ai-panel{position:fixed;right:24px;bottom:24px;width:min(620px,calc(100vw - 24px));height:min(900px,calc(100vh - 24px));min-height:700px;background:#efeae2;color:#111;border:1px solid rgba(255,255,255,.25);border-radius:22px;overflow:hidden;z-index:2147483001;isolation:isolate;box-shadow:0 30px 100px rgba(0,0,0,.48);display:none;flex-direction:column;contain:layout paint;}
   .ajads-ai-panel.open{display:flex;animation:ajIn .24s ease}
   @keyframes ajIn{from{opacity:0;transform:translateY(16px) scale(.97)}to{opacity:1;transform:none}}
 
@@ -48,7 +48,7 @@
   .ajads-ai-close{margin-left:auto;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.08);color:#ddd;width:36px;height:36px;border-radius:50%;font-size:21px;cursor:pointer;display:grid;place-items:center;transition:.2s}
   .ajads-ai-close:hover{background:#fff;color:#111}
 
-  .ajads-ai-messages{flex:1 1 auto;min-height:0;height:auto;overflow-y:auto;overflow-x:hidden;padding:22px 18px 20px;scroll-behavior:smooth;background-color:#efeae2;background-image:radial-gradient(rgba(0,0,0,.035) .7px,transparent .7px);background-size:9px 9px;overscroll-behavior:contain;position:relative;z-index:1;isolation:isolate}
+  .ajads-ai-messages{flex:1 1 0%;min-height:0;height:0;overflow-y:auto;overflow-x:hidden;padding:22px 18px 20px;scroll-behavior:smooth;background-color:#efeae2;background-image:radial-gradient(rgba(0,0,0,.035) .7px,transparent .7px);background-size:9px 9px;overscroll-behavior:contain;position:relative;z-index:1;isolation:isolate}
   .ajads-ai-messages::-webkit-scrollbar{width:8px}.ajads-ai-messages::-webkit-scrollbar-thumb{background:rgba(0,0,0,.20);border-radius:10px}.ajads-ai-messages::-webkit-scrollbar-track{background:transparent}
   .ajads-ai-msg{display:flex;width:100%;margin:0 0 14px;animation:ajMsg .18s ease;position:relative;z-index:1}
   .ajads-ai-msg.user{justify-content:flex-end}
@@ -61,7 +61,7 @@
   .ajads-ai-time{font-size:9px;color:#7b7b7b;margin-top:4px;padding:0 4px}
   .ajads-ai-msg.user .ajads-ai-time{text-align:right}
 
-  .ajads-ai-quick{flex:0 0 auto;display:flex;gap:7px;overflow-x:auto;padding:9px 13px 10px;background:rgba(255,255,255,.92);border-top:1px solid rgba(0,0,0,.06);scrollbar-width:none;position:relative;z-index:4;min-height:51px}
+  .ajads-ai-quick{flex:0 0 auto;display:flex;gap:7px;overflow-x:auto;padding:9px 13px 10px;background:transparent;border-top:0;scrollbar-width:none;position:relative;z-index:4;min-height:51px}
   .ajads-ai-quick::-webkit-scrollbar{display:none}
   .ajads-ai-chip{flex:0 0 auto;border:1px solid #cfcfcf;background:#fff;color:#202020;border-radius:999px;padding:8px 12px;font-size:11px;font-weight:700;cursor:pointer;transition:.18s;box-shadow:0 2px 5px rgba(0,0,0,.04)}
   .ajads-ai-chip:hover{background:#111;color:#fff;border-color:#111;transform:translateY(-1px)}
@@ -104,15 +104,15 @@
         <div class="ajads-ai-title">AJADS Chat</div>
         <button class="ajads-ai-close" aria-label="Close">×</button>
       </header>
-      <div class="ajads-ai-messages"></div>
-      <div class="ajads-ai-quick"></div>
-      <div class="ajads-ai-compose">
+      <div class="ajads-ai-messages" aria-live="polite"></div>
+      <footer class="ajads-ai-compose">
         <form class="ajads-ai-form">
           <input class="ajads-ai-input" autocomplete="off" placeholder="Tell me what you want to create..." />
           <button class="ajads-ai-send" aria-label="Send">↑</button>
         </form>
+        <div class="ajads-ai-quick"></div>
         <div class="ajads-ai-note">AJADS AI • Turn your idea into a project brief</div>
-      </div>
+      </footer>
     </section>
   `;
   document.body.appendChild(root);
