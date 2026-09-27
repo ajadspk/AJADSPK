@@ -1,5 +1,4 @@
 <!doctype html>
-<script src="ajads-chatbot.js"></script>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -391,5 +390,6 @@ button,input,select,textarea{max-width:100%;}
   const loadTimer=setInterval(()=>{progress=Math.min(100,progress+(progress<70?7:3));bar.style.width=progress+'%';count.textContent=progress+'%';if(progress>=100){clearInterval(loadTimer);setTimeout(()=>{loader.classList.add('exit');document.body.classList.remove('is-loading');},220)}},45);
 })();
 </script>
+<script src="ajads-chatbot.js"></script>
 </body>
 </html>

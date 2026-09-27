@@ -27,59 +27,54 @@
   const css = `
   #ajads-ai-root{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
   #ajads-ai-root *{box-sizing:border-box}
-  .ajads-ai-launcher{
-    position:fixed;right:24px;bottom:24px;width:64px;height:64px;border:0;border-radius:50%;
-    background:#111;color:#fff;cursor:pointer;z-index:2147483000;
-    box-shadow:0 14px 45px rgba(0,0,0,.28),0 0 0 1px rgba(255,255,255,.12) inset;
-    display:flex;align-items:center;justify-content:center;transition:.25s ease;
-  }
-  .ajads-ai-launcher:hover{transform:translateY(-3px) scale(1.03)}
-  .ajads-ai-launcher:before{content:"";position:absolute;inset:-6px;border-radius:50%;
-    border:1px solid rgba(255,255,255,.15);animation:ajPulse 2.5s infinite}
-  .ajads-ai-icon{font-size:25px;line-height:1}
-  @keyframes ajPulse{0%,100%{opacity:.25;transform:scale(.98)}50%{opacity:.8;transform:scale(1.05)}}
+  .ajads-ai-launcher{position:fixed;right:26px;bottom:26px;width:66px;height:66px;border:0;border-radius:50%;background:linear-gradient(145deg,#fff,#d9d9d9);color:#090909;cursor:pointer;z-index:2147483000;box-shadow:0 18px 55px rgba(0,0,0,.35),0 0 0 1px rgba(255,255,255,.35) inset;display:flex;align-items:center;justify-content:center;transition:.25s ease}
+  .ajads-ai-launcher:hover{transform:translateY(-4px) scale(1.04)}
+  .ajads-ai-launcher:before{content:"";position:absolute;inset:-7px;border-radius:50%;border:1px solid rgba(255,255,255,.22);animation:ajPulse 2.6s infinite}
+  .ajads-ai-icon{font-size:27px;line-height:1;font-weight:900}
+  @keyframes ajPulse{0%,100%{opacity:.2;transform:scale(.98)}50%{opacity:.75;transform:scale(1.06)}}
 
-  .ajads-ai-panel{
-    position:fixed;right:24px;bottom:98px;width:min(390px,calc(100vw - 28px));height:min(650px,calc(100vh - 120px));
-    background:#0d0d0d;color:#fff;border:1px solid rgba(255,255,255,.13);border-radius:24px;
-    overflow:hidden;z-index:2147482999;box-shadow:0 30px 90px rgba(0,0,0,.45);
-    display:none;flex-direction:column;backdrop-filter:blur(18px);
-  }
+  .ajads-ai-panel{position:fixed;right:24px;bottom:104px;width:min(480px,calc(100vw - 28px));height:min(740px,calc(100vh - 128px));min-height:520px;background:#efeae2;color:#111;border:1px solid rgba(255,255,255,.2);border-radius:26px;overflow:hidden;z-index:2147482999;box-shadow:0 30px 100px rgba(0,0,0,.48);display:none;flex-direction:column}
   .ajads-ai-panel.open{display:flex;animation:ajIn .24s ease}
-  @keyframes ajIn{from{opacity:0;transform:translateY(12px) scale(.98)}to{opacity:1;transform:none}}
-  .ajads-ai-head{padding:17px 18px;border-bottom:1px solid rgba(255,255,255,.09);display:flex;align-items:center;gap:11px}
-  .ajads-ai-mark{width:38px;height:38px;border-radius:13px;background:#fff;color:#111;display:grid;place-items:center;font-weight:900;font-size:13px}
-  .ajads-ai-title{font-size:14px;font-weight:800;letter-spacing:.2px}
-  .ajads-ai-status{font-size:11px;color:#9d9d9d;margin-top:2px}
-  .ajads-ai-close{margin-left:auto;background:none;border:0;color:#aaa;font-size:24px;cursor:pointer;padding:3px 6px}
-  .ajads-ai-messages{flex:1;overflow:auto;padding:18px 14px 12px;scroll-behavior:smooth}
-  .ajads-ai-msg{display:flex;margin:0 0 12px}
-  .ajads-ai-msg.user{justify-content:flex-end}
-  .ajads-ai-bubble{max-width:86%;padding:11px 13px;border-radius:16px;background:#181818;color:#f4f4f4;
-    font-size:13px;line-height:1.5;border:1px solid rgba(255,255,255,.06);white-space:pre-wrap}
-  .ajads-ai-msg.user .ajads-ai-bubble{background:#fff;color:#111;border-radius:16px 16px 5px 16px}
-  .ajads-ai-msg.bot .ajads-ai-bubble{border-radius:5px 16px 16px 16px}
-  .ajads-ai-time{font-size:9px;color:#777;margin-top:5px}
-  .ajads-ai-quick{display:flex;gap:7px;overflow-x:auto;padding:0 14px 10px;scrollbar-width:none}
-  .ajads-ai-quick::-webkit-scrollbar{display:none}
-  .ajads-ai-chip{flex:0 0 auto;border:1px solid rgba(255,255,255,.14);background:#141414;color:#ddd;border-radius:999px;
-    padding:8px 11px;font-size:11px;cursor:pointer;transition:.18s}
-  .ajads-ai-chip:hover{background:#fff;color:#111}
-  .ajads-ai-compose{padding:10px 12px 13px;border-top:1px solid rgba(255,255,255,.09)}
-  .ajads-ai-form{display:flex;gap:7px;background:#151515;border:1px solid rgba(255,255,255,.11);border-radius:16px;padding:6px}
-  .ajads-ai-input{flex:1;min-width:0;background:transparent;border:0;outline:0;color:#fff;padding:8px;font-size:13px}
-  .ajads-ai-input::placeholder{color:#777}
-  .ajads-ai-send{width:38px;height:38px;border:0;border-radius:12px;background:#fff;color:#111;cursor:pointer;font-weight:900}
-  .ajads-ai-note{font-size:9px;color:#666;text-align:center;margin-top:7px}
-  .ajads-ai-lead{margin-top:9px;padding:12px;border:1px solid rgba(255,255,255,.1);border-radius:15px;background:#121212}
-  .ajads-ai-lead input{width:100%;margin:4px 0;padding:9px 10px;background:#0a0a0a;border:1px solid #2a2a2a;border-radius:9px;color:#fff;outline:none;font-size:12px}
-  .ajads-ai-lead button{width:100%;padding:10px;border:0;border-radius:9px;background:#fff;color:#111;font-weight:800;cursor:pointer;margin-top:4px}
-  @media(max-width:520px){
-    .ajads-ai-launcher{right:15px;bottom:15px;width:58px;height:58px}
-    .ajads-ai-panel{right:10px;bottom:82px;width:calc(100vw - 20px);height:calc(100vh - 105px);border-radius:20px}
-  }
-  `;
+  @keyframes ajIn{from{opacity:0;transform:translateY(16px) scale(.97)}to{opacity:1;transform:none}}
 
+  .ajads-ai-head{height:76px;flex:0 0 76px;padding:12px 16px;background:#111;color:#fff;display:flex;align-items:center;gap:12px;box-shadow:0 2px 10px rgba(0,0,0,.2);position:relative;z-index:2}
+  .ajads-ai-mark{width:45px;height:45px;flex:0 0 45px;border-radius:50%;background:linear-gradient(145deg,#fff,#d7d7d7);color:#111;display:grid;place-items:center;font-weight:950;font-size:12px;letter-spacing:-.5px;box-shadow:0 0 0 3px rgba(255,255,255,.08)}
+  .ajads-ai-title{font-size:15px;font-weight:850;letter-spacing:.2px}
+  .ajads-ai-status{font-size:11px;color:#b9b9b9;margin-top:3px;display:flex;align-items:center;gap:6px}
+  .ajads-ai-status:before{content:"";width:7px;height:7px;border-radius:50%;background:#6ee7a2;box-shadow:0 0 9px rgba(110,231,162,.7)}
+  .ajads-ai-close{margin-left:auto;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.08);color:#ddd;width:38px;height:38px;border-radius:50%;font-size:22px;cursor:pointer;display:grid;place-items:center;transition:.2s}
+  .ajads-ai-close:hover{background:#fff;color:#111}
+
+  .ajads-ai-messages{flex:1;overflow:auto;padding:22px 17px 16px;scroll-behavior:smooth;background-color:#efeae2;background-image:radial-gradient(rgba(0,0,0,.035) .7px,transparent .7px);background-size:9px 9px}
+  .ajads-ai-messages::-webkit-scrollbar{width:7px}.ajads-ai-messages::-webkit-scrollbar-thumb{background:rgba(0,0,0,.18);border-radius:10px}
+  .ajads-ai-msg{display:flex;margin:0 0 15px;animation:ajMsg .18s ease}
+  .ajads-ai-msg.user{justify-content:flex-end}
+  @keyframes ajMsg{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}
+  .ajads-ai-msg>div{max-width:84%}
+  .ajads-ai-bubble{padding:12px 14px 10px;border-radius:6px 18px 18px 18px;background:#fff;color:#151515;font-size:14px;line-height:1.58;border:1px solid rgba(0,0,0,.055);white-space:pre-wrap;box-shadow:0 2px 4px rgba(0,0,0,.07);position:relative}
+  .ajads-ai-bubble:after{content:"";position:absolute;left:-5px;top:0;border-style:solid;border-width:0 6px 6px 0;border-color:transparent #fff transparent transparent}
+  .ajads-ai-msg.user .ajads-ai-bubble{background:#dcf8c6;color:#101010;border-radius:18px 6px 18px 18px;border-color:rgba(0,0,0,.04)}
+  .ajads-ai-msg.user .ajads-ai-bubble:after{left:auto;right:-5px;border-width:0 0 6px 6px;border-color:transparent transparent transparent #dcf8c6}
+  .ajads-ai-time{font-size:9px;color:#7b7b7b;margin-top:5px;padding:0 4px}
+  .ajads-ai-msg.user .ajads-ai-time{text-align:right}
+
+  .ajads-ai-quick{display:flex;gap:7px;overflow-x:auto;padding:10px 13px 11px;background:rgba(255,255,255,.72);border-top:1px solid rgba(0,0,0,.06);scrollbar-width:none}
+  .ajads-ai-quick::-webkit-scrollbar{display:none}
+  .ajads-ai-chip{flex:0 0 auto;border:1px solid #cfcfcf;background:#fff;color:#202020;border-radius:999px;padding:9px 13px;font-size:11px;font-weight:700;cursor:pointer;transition:.18s;box-shadow:0 2px 5px rgba(0,0,0,.04)}
+  .ajads-ai-chip:hover{background:#111;color:#fff;border-color:#111;transform:translateY(-1px)}
+
+  .ajads-ai-compose{padding:10px 12px 13px;background:#f5f1eb;border-top:1px solid rgba(0,0,0,.08)}
+  .ajads-ai-form{display:flex;gap:7px;background:#fff;border:1px solid #d3d0ca;border-radius:24px;padding:5px 5px 5px 8px;box-shadow:0 3px 12px rgba(0,0,0,.06)}
+  .ajads-ai-input{flex:1;min-width:0;background:transparent;border:0;outline:0;color:#111;padding:9px 8px;font-size:13px}
+  .ajads-ai-input::placeholder{color:#888}
+  .ajads-ai-send{width:42px;height:42px;border:0;border-radius:50%;background:#111;color:#fff;cursor:pointer;font-weight:900;font-size:17px;display:grid;place-items:center;transition:.2s}
+  .ajads-ai-send:hover{transform:scale(1.05);background:#000}
+  .ajads-ai-note{font-size:9px;color:#8a8a8a;text-align:center;margin-top:7px;letter-spacing:.1px}
+  .ajads-ai-lead{margin-top:9px;padding:12px;border:1px solid rgba(0,0,0,.1);border-radius:15px;background:#fff}
+  .ajads-ai-lead input{width:100%;margin:4px 0;padding:9px 10px;background:#fafafa;border:1px solid #ddd;border-radius:9px;color:#111;outline:none;font-size:12px}
+  .ajads-ai-lead button{width:100%;padding:10px;border:0;border-radius:9px;background:#111;color:#fff;font-weight:800;cursor:pointer;margin-top:4px}
+  @media(max-width:520px){.ajads-ai-launcher{right:15px;bottom:15px;width:58px;height:58px}.ajads-ai-panel{inset:0;width:100%;height:100%;min-height:0;border-radius:0}.ajads-ai-head{height:72px;flex-basis:72px}.ajads-ai-messages{padding:18px 11px 12px}.ajads-ai-msg>div{max-width:88%}.ajads-ai-bubble{font-size:14px}.ajads-ai-compose{padding-bottom:max(11px,env(safe-area-inset-bottom))}}
+  `;
   const style = document.createElement("style");
   style.id = "ajads-ai-style";
   style.textContent = css;
@@ -96,7 +91,7 @@
         <div class="ajads-ai-mark">AI</div>
         <div>
           <div class="ajads-ai-title">AJADS AI</div>
-          <div class="ajads-ai-status">Creative project assistant</div>
+          <div class="ajads-ai-status">Online • Creative project assistant</div>
         </div>
         <button class="ajads-ai-close" aria-label="Close">×</button>
       </header>
