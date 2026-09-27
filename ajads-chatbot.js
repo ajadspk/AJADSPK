@@ -35,11 +35,11 @@
   .ajads-ai-icon:before{content:"•••";position:absolute;left:4px;top:-7px;font-size:13px;letter-spacing:1px;color:#111}
   @keyframes ajPulse{0%,100%{opacity:.2;transform:scale(.98)}50%{opacity:.75;transform:scale(1.06)}}
 
-  .ajads-ai-panel{position:fixed;right:24px;bottom:24px;width:min(620px,calc(100vw - 24px));height:min(900px,calc(100vh - 24px));min-height:700px;background:#efeae2;color:#111;border:1px solid rgba(255,255,255,.25);border-radius:22px;overflow:hidden;z-index:2147483001;isolation:isolate;box-shadow:0 30px 100px rgba(0,0,0,.48);display:none;flex-direction:column;contain:layout paint;}
+  .ajads-ai-panel{position:fixed;right:24px;bottom:24px;width:min(500px,calc(100vw - 24px));height:min(800px,calc(100vh - 24px));min-height:700px;background:#efeae2;color:#111;border:1px solid rgba(255,255,255,.25);border-radius:22px;overflow:hidden;z-index:2147483001;isolation:isolate;box-shadow:0 30px 100px rgba(0,0,0,.48);display:none;flex-direction:column;contain:layout paint;}
   .ajads-ai-panel.open{display:flex;animation:ajIn .24s ease}
   @keyframes ajIn{from{opacity:0;transform:translateY(16px) scale(.97)}to{opacity:1;transform:none}}
 
-  .ajads-ai-head{height:64px;min-height:64px;flex:0 0 64px;padding:10px 14px;background:#111;color:#fff;display:flex;align-items:center;gap:10px;box-shadow:0 2px 10px rgba(0,0,0,.2);position:relative;z-index:5;isolation:isolate}
+  .ajads-ai-head{height:90px;min-height:64px;flex:0 0 64px;padding:10px 14px;background:#111;color:#fff;display:flex;align-items:center;gap:10px;box-shadow:0 2px 10px rgba(0,0,0,.2);position:relative;z-index:5;isolation:isolate}
   .ajads-ai-mark{width:38px;height:30px;flex:0 0 38px;border:2px solid #fff;border-radius:10px;background:transparent;color:#fff;display:grid;place-items:center;font-weight:900;font-size:0;position:relative}
   .ajads-ai-mark:before{content:"•••";font-size:14px;letter-spacing:1px;line-height:1;color:#fff;transform:translateY(-1px)}
   .ajads-ai-mark:after{content:"";position:absolute;left:6px;bottom:-6px;border-width:5px 5px 0 0;border-style:solid;border-color:#fff transparent transparent transparent}
